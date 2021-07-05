@@ -1,0 +1,51 @@
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+  <script>
+    function init() {
+      Tabletop.init({
+        key: "1W5SdG1TT2weNy7fQxAIAbw4SZQ3YRninSSJQLhQNmos",
+
+        callback: showInfo,
+
+        simpleSheet: true,
+      });
+    }
+
+    function showInfo(data, tabletop) {
+      console.log(data);
+
+      for (var i = 0; i < data.length; i++) {
+        $(".post").append(
+            '<div class="lf5WFf" role="textbox" data-gramm_editor="false" contenteditable="false">' +
+                '<h3 class="zfr3Q OmQG5e CDt4Ke" style="text-align: center;" role="presentation">' +
+                    data[i].title +
+                "</h3>" +
+            "</div> " +
+            '<div class="meta-info">' +
+            '<iframe width="560" height="315" src="' +
+            data[i].url +
+            '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+            "</div>" +
+            "</div>"
+        );
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", init);
+  </script>
+</head>
+
+<body>
+    <div class="LS81yb TZTnI IKVHqc aVXSwc yaqOZd lQAHbd" >
+
+            <div class="post">
+
+            </div>
+    </div>
+  
+</body>
